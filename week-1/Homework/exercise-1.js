@@ -39,7 +39,8 @@ function getOwnerFullName(house) {
 
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
-  return `${house1.currentOwner.email}, ${house2.currentOwner.email}.`;
+  // return `${house1.currentOwner.email}, ${house2.currentOwner.email}.`; salida como dos elementos separados 
+  return [house1.currentOwner.email, house2.currentOwner.email];   // salida como un array 
 }
 
 // returns the address for the cheapest house out of the two
@@ -50,6 +51,29 @@ function getCheapestAddress(house1, house2) {
   }
   else 
     return `${house2.address}.`;
+// Math.min (house1.price,house2.price)    funcion para conseguir los minimos de numeros 
+
+// let pricehouse = [house1.price,house2.price]
+// let adresshouse = [house1.adrress,hose2.address]
+// let print = pricehouse.slice()sort()               resultado de toño 
+// index = pricehouse.indexOf(print[0])
+// return addresshouses[index]
+
+
+
+// function getCheapestAddress(house1, house2) {
+//   let array =[house1,house2]
+//   let result = array.sort((a,b)=> {return a.price-b.price})         // para x cantidad de casas 
+//   return result[0].address;
+// }
+
+
+
+// function getCheapestAddress(house1, house2) {
+//   if (house1.price<house2.price){                              //   mas simple para solo dos casas 
+//     return house1.address;
+//   }return house2.address;
+// }
 
 }
 

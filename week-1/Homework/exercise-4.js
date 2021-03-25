@@ -49,25 +49,77 @@ let restaurant1 = {
   
   let restaurants = [restaurant1, restaurant2, restaurant3];
   
+  
   /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
   WRITE YOUR CODE BELOW
   */
   
   let restaurantFinderApplication = {
+    
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-      // Complete here
+      let local = restaurants.filter(
+        function(check) {
+          if ((check.totalSeats-check.numberOfCustomers)>=(numberOfPeople))
+          // return check.name // por que no me deja con check.name
+          return check
+        }
+      )
+      return local.map( x => x.name) 
     },
-    findRestaurantServingDish: function (dishName) {
-      // Complete here
+      
+      // let tSeats = this.restaurants.totalSeats
+      // let numpeoples = this.restaurants.filter ( x => (x.totalSeats - x.numberOfCustomers) >= numberOfPeople) // no puedo usar arrow functions aqui cierto ? 
+      // return numpeoples  },
+    // };
+    //   let numpeoples = this.restaurants.filter( 
+    //   function (check) {
+    //   if ((check.totalSeats-check.numberOfCustomers)<=(numberOfPeople)){
+    //     return check; }
+    //   return numberOfPeople;
+    //   })} ,
+
+      // Complete here,
+    
+      findRestaurantServingDish: function (dish) {
+          let plate = restaurants.filter( function(check) {
+            if ((check.menu.includes(dish))) {
+            // return check.name // por que no me deja con check.name, me devuelve object object 
+            return check   
+          } 
+        }
+      )  
+      return plate.map( x => x.name) ; 
     },
-    countNumberOfRestaurantsInArea: function (area) {
+
+    // findRestaurantServingDish: function (dishName) {
+    //   let dishplate = this.restaurants.filter (x => x.menu === dishName ) 
+    //   return dishplate  },
+    //   // Complete here
+
+    countNumberOfRestaurantsInArea: function (area) { 
+      let plate = restaurants.filter( function(check) {
+        if ((check.area.includes(center))) {
+        // return check.name // por que no me deja con check.name, me devuelve object object 
+        return check   
+      } 
+    }
+  )  
+  return plate.map( x => x.name) ; 
+},
+  }
+
+
+    // countNumberOfRestaurantsInArea: function (area) {
+    //   let restaurantInArea = this.restaurants.filter (x => area >= numberOfPeople ) 
+    //   return restaurantInArea ; 
+    // },
+
+
       // Complete here
-    },
-  };
   
   /*
   DO NOT EDIT ANYTHING BELOW THIS LINE

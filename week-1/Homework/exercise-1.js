@@ -97,3 +97,23 @@ console.log(
     kinningParkHouse
   )}`
 );
+
+
+
+
+
+
+
+
+
+
+
+
+// let cheescakePlatano= { 
+//   tamaños: function (size) {
+//     if ( size === '20cm'){ return ' La chesscake de platano cuesta: 15 Euros';}
+//     else if ( size >'30cm') {return 'La chesscake de platano cuesta: 100 Euros' }
+//     else {return 'La chesscake de platano cuesta: 10 Euros' ; }}, };
+
+
+// console.log(cheescakePlatano.tamaños('31cm'))

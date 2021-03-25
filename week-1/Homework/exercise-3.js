@@ -16,23 +16,21 @@ let coffeeMachine = {
       flatWhite: 3.0,
     },
     insertedAmount: 0,
+
     insertMoney: function (amount) {
-      this.insertedAmount- amount;
+      this.insertedAmount = amount;
     },
 
-    getCoffee: function (coffee) { 
-      console.log(this.insertMoney, '    ', this.prices[coffe]);
-      if (this.insertedAmount >= this.prices[coffe]){
-        return `Please take your cappucino ${coffe} `}
+    getCoffee: function (coffee) {                                   //pregunta de esos corchetes en coffe 
+      console.log(this.insertMoney, '    ', this.prices[coffee]);   // el tipo de cafe lo elige directamente por el monto ingresado ???
+      if (this.insertedAmount >= this.prices[coffee]){
+        return `Please take your ${coffee} `}
       else {
-        return `Sorry you don´t have enought money for a ${coffe}`;
+        return `Sorry you don´t have enought money for a ${coffee}`;
       }
     }
   }
   
-
-
-
   /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
   */

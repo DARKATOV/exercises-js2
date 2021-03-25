@@ -39,6 +39,14 @@ var writers = [
   },
 ];
 
+
+writers.forEach( person => {console.log( `Hi, my name is ${person.firstName} ${person.lastName}. 
+I am ${person.age} years old, and work as a ${person.occupation}.`)});
+
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+
+let aliveWriters = writers.filter ( person => person.alive === true) ;
+console.log(aliveWriters);
+aliveWriters.forEach (person => {console.log ( `${person.firstName} ${person.lastName}`)})

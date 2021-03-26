@@ -177,8 +177,8 @@ console.log('');
 
 function deleteSkill (skill){
   const toDelete = (deleteAct) => deleteAct === skill;
-  let positionSkill = this.skills.findIndex(toDelete);
-  // console.log(positionSkill)
+  let positionSkill = this.skills.findIndex(toDelete);      // esto no se puede hacer como un array function ???? 
+  // console.log(positionSkill)                                // y por que 
   if (positionSkill >= 0) {
     return this.skills.splice(positionSkill,1)
   }

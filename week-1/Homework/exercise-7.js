@@ -48,5 +48,5 @@ If you want an extra challenge, only `console.log()` the writers that are alive.
 */
 
 let aliveWriters = writers.filter ( person => person.alive === true) ;
-console.log(aliveWriters);
+// console.log(aliveWriters);
 aliveWriters.forEach (person => {console.log ( `${person.firstName} ${person.lastName}`)})

@@ -261,9 +261,8 @@ function mentorWithMoreSkills(data) {
       // return max ;
     }    
   }
-
   data.forEach(people => { if (people.skills.length === max){
-    nameMax.push(`${people.firstName} ${people.lastName}`);
+  nameMax.push(`${people.firstName} ${people.lastName}`);
   }})
 
 return nameMax ;
@@ -326,8 +325,8 @@ console.log("");
 
 let numberOfPersons = mentors.length;
 mentors.forEach (person=>{
-  person.studentLikes = person.studentLikes + numberOfPersons; 
-  console.log(person.studentLikes);
+person.studentLikes = person.studentLikes + numberOfPersons; 
+console.log(person.studentLikes);
 }
 );
 

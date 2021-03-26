@@ -5,6 +5,9 @@ Write JavaScript below that logs:
     1. all the "p" element nodes of the document,
     --> should log a list of nodes with a length of 6
 
+    console.log(document.querySelectorAll('p'))
+
+
     2. the first div element node
     --> should log the ".site-header" node
 
@@ -16,6 +19,29 @@ Write JavaScript below that logs:
 
 */
 
+// 1. all the "p" element nodes of the document,
+// --> should log a list of nodes with a length of 6
+
+console.log(document.querySelectorAll('p'))
+
+
+// 2. the first div element node
+// --> should log the ".site-header" node
+
+console.log(document.querySelector('div'))
+console.log(document.querySelectorAll('div')[0])
+
+
+// 3. the element with id "jumbotron-text"
+// --> should log the "#jumbotron-text" node
+
+console.log(document.getElementById('jumbotron-text'))
+
+
+// 4. all the "p" elements of contained inside  the .primary-content element node
+// --> should log a list of nodes with a length of 3
+
+console.log(document.querySelectorAll('.primary-content p'))
 
 /*
 Task 2
@@ -23,6 +49,14 @@ Task 2
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
+function alertCallback() {
+    event.preventDefault()
+    // console.log('alertBtn')
+    alert ("Thanks for visiting Bikes for Refugees!")
+}
+
+const alertButton = document.getElementById('alertBtn')
+alertButton.addEventListener('click', alertCallback)
 
 
 /*
@@ -31,6 +65,19 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
+
+//1 funcion callback 
+
+function changeColor(event) {
+    console.log('change')
+}
+
+//2 obtener el objteto boton 
+
+//3 agragar el evento listener 
+
+
+
 
 
 /*

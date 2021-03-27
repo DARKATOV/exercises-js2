@@ -13,9 +13,19 @@
  *      .....
  * </div>
  */
+
 function exerciseOne(arrayOfPeople) {
+  arrayOfPeople.forEach(people => {
   let content = document.querySelector("#content");
-}
+  let paragraph = document.createElement("p"); 
+  let h1 = document.createElement("h1");
+  let h2 = document.createElement("h2");
+  content.appendChild(paragraph);
+  h1.textContent = people.name;
+  paragraph.appendChild(h1);
+  h2.textContent = people.job;
+  paragraph.appendChild(h2); 
+  });}
 
 /**
  *
@@ -25,11 +35,32 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
-}
 
-/**
-    I'd like to display my three favorite books inside a nice webpage!
+  let content = document.querySelector("#content");
+  let paragraph = document.createElement("p");
+  let listObjects = document.createElement("ul");
+  
+  content.appendChild(paragraph);
+  paragraph.appendChild(listObjects);
+    // objectInlist.innerHTML = article;
+    // objectInlist.innerHTML = "<li>article</li>";
+    for (let index = 0; index < shopping.length; index++) {
+      let objectInlist = document.createElement("li");
+      listObjects.appendChild(objectInlist);
+      // console.log(shopping.length);
+      // console.log(index);
+      objectInlist.textContent = shopping[index]; 
+      // objectInlist.textContent = shopping[index] ;
+      // beforebegin
+      // objectInlist.insertAdjacentText("afterend",shopping[index]);
+      // objectInlist.insertAdjacentText("beforeend",shopping[index]);
+      // objectInlist.insertAdjacentText("afterbegin",shopping[index]);
+      // objectInlist.appendChild(shopping[index]);
+  }};
+  //Write your code in here
+
+
+    //I'd like to display my three favorite books inside a nice webpage!
 
     const books = [
         {
@@ -48,8 +79,13 @@ function exerciseTwo(shopping) {
             alreadyRead: true
         }
     ];
+ 
 
-    Iterate through the array of books.
+
+
+
+
+    /*Iterate through the array of books.
     - For each book, create a <p> element with the book title and author and append it to the page.
     - Use a <ul> and <li> to display the books.
     - Add an <img> to each book that links to a URL of the book cover.
@@ -58,8 +94,14 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
+  
+
+
+
+
+
   //Write your code in here
-}
+};
 
 //
 //

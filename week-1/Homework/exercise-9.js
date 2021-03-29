@@ -152,7 +152,7 @@ function removeFromShoppingCart(id){
 //                                                      // let check = productOfList.(tempProduct)
 //         if (products.forEach(product => products.id.include(id)===true)){
 //         return productOfList.splice(check,1);
-//       }
+//       } 
 //     }
 //   }
 // )

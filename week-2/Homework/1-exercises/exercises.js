@@ -62,27 +62,24 @@ function exerciseTwo(shopping) {
 
     //I'd like to display my three favorite books inside a nice webpage!
 
-    const books = [
-        {
-            title: "The Design of Everyday Things",
-            author: "Don Norman",
-            alreadyRead: false
-        },
-        {
-            title: "The Most Human Human",
-            author: "Brian Christian",
-            alreadyRead: true
-        },
-        {
-            title: "The Pragmatic Programmer",
-            author: "Andrew Hunt",
-            alreadyRead: true
-        }
-    ];
+    // const books = [
+    //     {
+    //         title: "The Design of Everyday Things",
+    //         author: "Don Norman",
+    //         alreadyRead: false
+    //     },
+    //     {
+    //         title: "The Most Human Human",
+    //         author: "Brian Christian",
+    //         alreadyRead: true
+    //     },
+    //     {
+    //         title: "The Pragmatic Programmer",
+    //         author: "Andrew Hunt",
+    //         alreadyRead: true
+    //     }
+    // ];
  
-
-
-
 
 
     /*Iterate through the array of books.
@@ -93,15 +90,63 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-function exerciseThree(books) {
   
 
-
-
-
-
+function exerciseThree(books) {
+  let h1 = document.createElement("h1");
+  h1.textContent = "BookList";
+  let content = document.querySelector("#content");
+  let ul = document.createElement("ul");
+  content.appendChild(h1);
+  content.appendChild(ul);
+  let img1 = "./img/descarga.jpg";
+  let img2 = "./img/descarga2.jpg ";
+  let img3 = "./img/descarga3.jpg ";
+  let imgs = [img1,img2,img3];
+  ul.style.listStyle = "none";      // cambio de valores en style de ul directamente asignando un valor 
+  ul.style.display = "flex";
+  ul.style.flexWrap = "wrap";
+  ul.style.padding = "20px";
+  books.forEach((book,index) => {      // doble indice para la iteracion 
+    // declarar objetos  
+    let paragraph = document.createElement("p");
+    let li = document.createElement("li");
+    let img = document.createElement("img");
+    //cambiar valores 
+    paragraph.textContent = `${book.title} - ${book.author} `;
+    img.src = imgs[index]; // condicion comentada por Jaider // no entendida 
+    li.style.margin = "15px";
+    li.style.padding = "10px";
+    li.style.minWidth = "350px";     // modificacion de class con class creada en style 
+    li.id = `li-${index}`;        // modificacion de id 
+    // imgs[index].style.display =block;
+    // img.style.marginLeft = auto;
+    // img.style.marginRight = auto;             // por que no puedo modificar estos valores sin cargarme la pagina 
+    // img.style.width = "50%";  
+     
+    // if (book.alreadyRead){
+    //   li.style.backgroundColor = "green";
+    // } else {
+    //   li.style.backgroundColor = "red";
+    // }
+    li.style.backgroundColor = book.alreadyRead ? "green" : "red"; 
+    // li.className = book.alreadyRead ? "read" : "unread";
+    // appends 
+    ul.appendChild(li);
+    li.appendChild(paragraph); 
+    li.appendChild(img);
+  });
   //Write your code in here
 };
+
+
+
+
+
+
+
+
+
 
 //
 //

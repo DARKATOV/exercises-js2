@@ -54,7 +54,7 @@ var product4 = {
   id: 4,
   name: "PS5",
   price: 300.53,
-  stock: 50
+  stock: 50,                            // test with zero for step 6 
 };
 
 products.push(product1);
@@ -74,7 +74,7 @@ var shoppingCart = {
 
 function addToShoppingCart(id){
   products.forEach(productOfList => {
-    if ( productOfList.id === id){
+    if ( productOfList.id === id && productOfList.stock > 0 ){   // added the && condicion for step 6 
       shoppingCart.totalPrice = shoppingCart.totalPrice + productOfList.price;
       shoppingCart.selectedProducts.push(productOfList);
     }})
@@ -164,18 +164,31 @@ function removeFromShoppingCart(id){
 
 
 
-
-
-
+function shop(){
+  shoppingCart.totalPrice = 0;
+  console.log(product4.stock);     // test 
+  shoppingCart.selectedProducts.forEach( product => {
+    product.stock = product.stock - 1;
+  })
+  shoppingCart.selectedProducts = [];
+  console.log(product4.stock);     //test 
+}
 
 // 6. If there is not enough stock, the product cannot be added to the shopping cart
 // */
 
-function shop(){
 
-}
+
+
+
+
+
+
 
 //results
+
+
+
 addToShoppingCart(1);
 console.log("Step 1");
 console.log("Total Price = " + shoppingCart.totalPrice);

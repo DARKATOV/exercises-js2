@@ -1,4 +1,6 @@
 // answers paper 
+    
+    // first part    
 
 const jumbotron = document.querySelector("div.jumbotron");  // por que aqui no lleva numeral ??
 const donate = document.querySelector("div.jumbotron .btn-primary");
@@ -38,3 +40,18 @@ function changeColorStep1(pallet){
 blueBtn.addEventListener('click', () => changeColorStep1(colorPallets[0]));
 orangeBtn.addEventListener('click', () => changeColorStep1(colorPallets[1]));
 greenBtn.addEventListener('click', () => changeColorStep1(colorPallets[2]));
+
+
+    // second part
+
+const submit = document.querySelector("#submitBtn");
+const inputEmail = document.querySelector("#exampleInputEmail1");
+const inputName = document.querySelector("#example-text-input");
+const inputDescription = document.querySelector("#exampleTextarea");
+
+function formVerefication(event){
+    event.preventDefault();
+    alert("si");
+};
+
+submit.onclick = (event) => {}

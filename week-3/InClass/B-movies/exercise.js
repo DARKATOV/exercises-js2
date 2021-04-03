@@ -59,9 +59,65 @@ var movies = [
 ];
 
 // create showMovies function
+// const body = document.querySelector('#body');
+// const divMain = document.querySelector('#main');
+
+
+function showMovies(){
+  document.querySelectorAll('#all-movies p:not(.alert)').forEach(movie => movie.remove());
+  const divAllMovies = document.getElementById('all-movies');
+  movies.forEach(movie => {
+    const information = `${movie.title} - ${movie.director}`;
+    const p = document.createElement('p');
+    const h4 = document.createElement('h4');
+    h4.append(information);
+    p.appendChild(h4);
+    divAllMovies.appendChild(p);
+  })
+
+  const moviesNumber= document.querySelector(`#movies-number`)
+  moviesNumber.innerText = movies.length
+
+};
+
+setTimeout(() => showMovies(), 1000);    // por que tengo que colocar el time para que se queden los valores fijos en la pagina ? 
 
 
 // create a new movie object for your favorite movie
 
+const myMovie = {
+  title: "The lord of the rings",
+  director: "Peter Jackson",
+  type: "Epic",
+  haveWatched: true,
+};
+
+function addMovie (movie){
+  movies.push(movie);
+  showMovies();
+}
+
+setTimeout(() => addMovie(myMovie), 5000);
+
+
 
 // create addMovies function
+
+const submitButton = document.getElementById('submitButton');
+
+submitButton.addEventListener('click', (eventButton) =>{
+  eventButton.preventDefault();
+  const titleTextField = document.getElementById('titleTextField');
+  const directorTextField = document.getElementById('directorTextField');
+  const typeTextField = document.getElementById('typeTextField');
+  const haveWatchedTextField = document.getElementById('haveWatchedTextField');
+  const movie = {
+    title: titleTextField.value,
+    director: directorTextField.value,
+    type: typeTextField.value,
+    haveWatched: haveWatchedTextField.value
+  }
+  if(titleTextField.value === "" || directorTextField.value === "" || typeTextField.value === "" || haveWatchedTextField.value === ""){
+  }
+  else {addMovie(movie)};
+})

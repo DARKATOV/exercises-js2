@@ -61,15 +61,13 @@ let restaurant1 = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-      let local = restaurants.filter(
-        function(check) {
-          if ((check.totalSeats-check.numberOfCustomers)>=(numberOfPeople))
+      const local = restaurants.filter( (restaurant) => 
           // return check.name // por que no me deja con check.name
-          return check
-        }
-      )
-      return local.map( x => x.name) 
-    },
+          // propiedad de 'filter' subconjunto , con tu me devuelve los que cumplen 
+          (restaurant.totalSeats-restaurant.numberOfCustomers)>=(numberOfPeople)
+        )
+      return local.map( x => x.name);
+    
       
       // let tSeats = this.restaurants.totalSeats
       // let numpeoples = this.restaurants.filter ( x => (x.totalSeats - x.numberOfCustomers) >= numberOfPeople) // no puedo usar arrow functions aqui cierto ? 

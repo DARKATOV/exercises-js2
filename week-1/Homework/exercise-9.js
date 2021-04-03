@@ -135,7 +135,7 @@ function removeFromShoppingCart(id){
 //   const toDelete = (deleteAct) => deleteAct === skill;
 //   let positionSkill = this.skills.findIndex(toDelete);      // esto no se puede hacer como un array function ????
 //   // console.log(positionSkill)                                // y por que
-//   if (positionSkill >= 0) {
+//   if (positionSkill >= 0) {                                    // puede ser con filter 
 //     return this.skills.splice(positionSkill,1)
 //   }
 //   else {

@@ -38,7 +38,7 @@ let coffeeMachine = {
   coffeeMachine.insertMoney(2.4);
   console.log(
     `Expected result: 'Please take your cappuccino'. Actual result: ${coffeeMachine.getCoffee(
-      "cappuccino"
+      "cappuccino"   // con este parametro selecciono al cafe 
     )}`
   );
   

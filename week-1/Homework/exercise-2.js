@@ -32,7 +32,7 @@ let person = {
   DO NOT EDIT ANYTHING BELOW THIS LINE
   */
   
-  person.makeFriend('Bob'); // aqui tenia un punto no entiendo la razon , pero no me dejaba colocarlo asi en la funcion 
+  person.makeFriend("Bob"); // aqui tenia un punto no entiendo la razon , pero no me dejaba colocarlo asi en la funcion 
   
   console.log(
     `Expected result: 'John,Nina,Bob'. Actual result: ${person.friends}`

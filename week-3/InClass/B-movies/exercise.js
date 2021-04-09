@@ -80,7 +80,7 @@ function showMovies(){
 
 };
 
-setTimeout(() => showMovies(), 1000);    // por que tengo que colocar el time para que se queden los valores fijos en la pagina ? 
+showMovies();    // por que tengo que colocar el time para que se queden los valores fijos en la pagina ? 
 
 
 // create a new movie object for your favorite movie

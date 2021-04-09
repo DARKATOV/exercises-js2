@@ -10,3 +10,38 @@ user latitude and longitude.
 
 ================
 */
+
+document.getElementById(`submitButton`).addEventListener('click', event =>{
+    event.preventDefault();
+    console.log(`submitButton`);
+    const latitud = document.getElementById('lati').value;
+    const longitud = document.getElementById('longi').value;
+    if (longitud.length > 0 && latitud.length > 0) {
+    let check1 = isNaN(longitud); 
+    let check2 = isNaN(latitud)
+    if (check1 == false && check2 == false) {
+    const url = `https://fcc-weather-api.glitch.me/api/current?lat=${latitud}&lon=${longitud}`;
+    console.log(url);
+    fetch(url)
+    .then(response => {
+        console.log(response);
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+        const h3 = document.createElement('h3');
+        h3.textContent = data.main.temp;
+        document.querySelector(`body`).appendChild(h3);
+    });
+    } else {
+    alert("Ingrese un valor valido")
+    }} else {
+        alert("Ingrese un valor valido")
+        // const h4 = document.createElement('h4');
+        // h4.textContent = `Ingese un valor correcto`;
+        // document.querySelector('body').appendChild(h4);
+        // console.log(h4);
+    }
+
+});
+
